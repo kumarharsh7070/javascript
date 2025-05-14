@@ -1,0 +1,21 @@
+let mydate = new Date();
+console.log(mydate.toString())
+console.log(mydate.toISOString())
+console.log(mydate.toLocaleString())
+console.log(mydate.toDateString())
+let myCreatedate = new Date(2023,1,23)
+console.log(myCreatedate.toString())
+console.log(myCreatedate.toDateString())
+let mytimestamp =Date.now()
+console.log(mytimestamp)
+console.log(Math.floor(Date.now()/1000));
+
+let newdate =new Date()
+console.log(newdate.getDate())
+console.log(newdate.getMonth())
+console.log(newdate.getFullYear())
+console.log(newdate.getTime())
+console.log(newdate.getHours())
+console.log(newdate.getMinutes())
+console.log(newdate.getMilliseconds())
+console.log(newdate.getDay())
