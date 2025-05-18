@@ -37,3 +37,13 @@ const user=[
 user[1].email
 console.log(Object.keys(tinderUser))
 console.log(Object.values(tinderUser))
+const course={
+    coursename:"js in hindi",
+    price:"999",
+    courseinstracor:"kumar"
+}
+
+const{courseinstracor: instrctor} =course
+
+//  console.log(courseinstracor);
+ console.log(instrctor)
