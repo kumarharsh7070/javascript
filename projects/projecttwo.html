@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<style>
+    .container{
+        text-align: center;
+        background-color: bisque;
+    }
+    input[type="text"]{
+        margin-left: 15px;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+    button{
+        background-color: red;
+        color: black;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>BMI CALCULATOR</h1>
+        <form>
+            <p><span>Height in cm</span><input type="text" id="height"></p>
+            <p><span>Weight in kg</span><input type="text" id="Weight"></p>
+            <button>Calculate</button>
+            <div id="result"></div>
+            <div id="weight-guide">
+                <h3>BMI Weight Guide</h3>
+                <p>Under weight = Less than 18.6</p>
+                <p>Normal range= 18.6 and 24.9</p>
+                <p>Overwight = Greater than 24.9</p>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="projecttwoscript.js"></script>
+</html>
