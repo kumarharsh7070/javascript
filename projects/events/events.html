@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>My Image List</h2>
+  <ul id="images">
+    <li>1. <img id="img1" src="https://images.pexels.com/photos/32547348/pexels-photo-32547348.jpeg" alt="Image 1" width="100"></li>
+    <li>2. <img id="img2" src="https://images.pexels.com/photos/32549562/pexels-photo-32549562.jpeg" alt="Image 2" width="100"></li>
+    <li>3. <img id="img3" src="https://images.pexels.com/photos/32550977/pexels-photo-32550977.jpeg" alt="Image 3" width="100"></li>
+    <li>4. <img id="img4" src="https://images.pexels.com/photos/24022862/pexels-photo-24022862.jpeg" alt="Image 4" width="100"></li>
+    <li>5. <a href="https://www.google.com"  id="google" target="_blank">Visit Google</a></li>
+  </ul>
+</body>
+<script>
+  document.getElementById("images").addEventListener("click", function(){
+    console.log("inside ul image",);
+  },false)
+  document.getElementById("img3").addEventListener("click", function(){
+    console.log("inside  li image");
+  },true)
+
+  document.getElementById("google").addEventListener("click",function(e){
+    e.preventDefault()
+    e.stopPropagation()
+    console.log("click google")
+  },false);
+
+  document.querySelector("#images").addEventListener("click",function(e){
+    console.log(e.target.parentNode);
+    if(e.target.tagName==="IMG"){
+    let removeit=e.target.parentNode;
+    removeit.remove()
+    }
+  })
+</script>
+</html>
