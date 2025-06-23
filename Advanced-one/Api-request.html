@@ -1,0 +1,25 @@
+<body>
+  <p id="status"></p>
+</body>
+<script>
+  const requesturl = 'https://jsonplaceholder.typicode.com/posts/1';
+  const xhr = new XMLHttpRequest();
+  const statusText = [
+    "0 UNSENT: Client has been created. open() not called yet.",
+    "1 OPENED: open() has been called.",
+    "2 HEADERS_RECEIVED: send() called, headers/status available.",
+    "3 LOADING: Downloading; responseText holds partial data.",
+    "4 DONE: The operation is complete."
+  ];
+
+  xhr.open('GET', requesturl);
+  xhr.onreadystatechange = function () {
+    document.getElementById('status').innerText = statusText[xhr.readyState] || "Unknown state";
+    console.log("State:", xhr.readyState);
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log("Success:", xhr.responseText);
+    }
+  };
+
+  xhr.send();
+</script>
