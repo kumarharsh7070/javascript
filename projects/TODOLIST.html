@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled To-Do List</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #ece9e6, #ffffff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 30px 40px;
+        width: 90%;
+        max-width: 500px;
+      }
+
+      .head h1 {
+        margin: 0;
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 65%;
+        padding: 10px;
+        border: 2px solid #7c3aed;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+      }
+
+      #btn {
+        padding: 10px 16px;
+        margin-left: 10px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4f46e5;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #btn:hover {
+        background-color: #3730a3;
+      }
+
+      .output h2 {
+        color: #444;
+        margin-top: 25px;
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      .para p {
+        background-color: #f3f4f6;
+        padding: 12px 14px;
+        margin: 8px 0;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .para span {
+        flex-grow: 1;
+        font-size: 16px;
+        color: #111827;
+      }
+
+      .para button {
+        margin-left: 10px;
+        padding: 6px 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: #4b5563;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .para button:hover {
+        background-color: #1f2937;
+      }
+      .completed {
+        text-decoration: line-through;
+        color: gray;
+        opacity: 0.7;
+      }
+
+      @media (max-width: 600px) {
+        input[type="text"] {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        #btn {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <h1>📝 My To-Do List</h1>
+      </div>
+      <input type="text" id="text" placeholder="Enter a task..." />
+      <button id="btn">Add</button>
+      <div class="output">
+        <h2>📋 Task List</h2>
+      </div>
+      <div class="mainoutput">
+        <div class="para" id="para"></div>
+      </div>
+    </div>
+
+    <script src="TODO.js"></script>
+  </body>
+</html>
