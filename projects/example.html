@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Buttons Example</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="myInput" placeholder="Click buttons..." style="width: 300px; height: 30px; font-size: 16px;">
+    <div id="buttonContainer"></div>
+
+    <script>
+        const buttonLabels = ["shoe", "hat", "bag", "watch", "glasses", "shirt", "pants", "coat", "socks", "scarf"];
+        const container = document.getElementById("buttonContainer");
+        const input = document.getElementById("myInput");
+
+        buttonLabels.forEach(red=> {
+            const btn = document.createElement("button");
+            btn.textContent = red;
+            btn.addEventListener("click", () => {
+                input.value = red; // Set input to the clicked label
+                // OR: input.value += label; // Uncomment to append instead
+            });
+            container.appendChild(btn);
+        });
+    </script>
+
+</body>
+</html>
