@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>bind() Example</title>
 </head>
 <body>
-    <button>
-click me
-    </button>
+  <button id="greetBtn">Greet Me</button>
+
+  <script>
+    const user = {
+      name: "Harsh",
+      greet: function () {
+        alert("Hello, " + this.name);
+      }
+    };
+
+    const button = document.getElementById("greetBtn");
+
+    // If we do this:
+    // button.addEventListener("click", user.greet);
+    // 'this' will be the button, not the user!
+
+    // So we use bind to fix 'this'
+    button.addEventListener("click", user.greet.bind(user));
+  </script>
 </body>
-<script>
- class React{
-    constructor(){
-        this.library="react";
-        this.server='https://localhost:300'
-        document.querySelector("button").addEventListener("click", this.handleclick.bind(this))
-    }
-    handleclick(){
-        console.log('clicked button');
-        console.log(this);
-        
-        
-    }
- }
- const app= new React()
-</script>
 </html>
