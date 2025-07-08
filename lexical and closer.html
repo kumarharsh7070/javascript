@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="red">red</button>
+    <button id="yellow">yellow</button>
+  </body>
+  <script>
+    //     function init() {
+    //      var name = "Mozilla"; // name is a local variable created by init
+    //       function displayName() {
+    //     // displayName() is the inner function, that forms a closure
+    //         console.log(name); // use variable declared in the parent function
+    //   }
+
+    //   function callme() {
+    //     console.log("harsh",name);
+
+    //   }
+    //   callme();
+    //   displayName();
+    // }
+    // init();
+    function makeFunc() {
+      const name = "Mozilla";
+      function displayName() {
+        console.log(name);
+      }
+      return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+    // example--------------------------------------------
+    function handler(color) {
+        return function (){
+            document.body.style.backgroundColor=`${color}`
+        }
+    }
+    document.getElementById("red").onclick=handler("red");
+        document.getElementById("yellow").onclick=handler("yellow");
+
+  </script>
+</html>
