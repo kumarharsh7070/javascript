@@ -37,12 +37,11 @@
     myFunc();
     // example--------------------------------------------
     function handler(color) {
-        return function (){
-            document.body.style.backgroundColor=`${color}`
-        }
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
     }
-    document.getElementById("red").onclick=handler("red");
-        document.getElementById("yellow").onclick=handler("yellow");
-
+    document.getElementById("red").onclick = handler("red");
+    document.getElementById("yellow").onclick = handler("yellow");
   </script>
 </html>
