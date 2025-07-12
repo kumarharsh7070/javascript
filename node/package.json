@@ -1,5 +1,6 @@
 {
   "name": "harry",
+  
   "version": "1.0.0",
   "description": "it is a amazing package",
   "main": "index.js",
