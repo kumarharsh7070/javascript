@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Triangle Area</title>
+  </head>
+  <body>
+    <p class="para"></p>
+
+    <script>
+      // var base = prompt("Please enter base value");
+      // var height = prompt("Please enter height value");
+
+      // // Convert input to numbers (prompt returns strings)
+      // base = parseFloat(base);
+      // height = parseFloat(height);
+
+      // var cal = (base * height) / 2;
+
+      // document.getElementsByClassName("para")[0].innerHTML = `The area of the triangle is: ${cal}`;
+      // second question-------------------------------------------------------------------------------------------------
+      // let a = prompt("Enter first side of triangle");
+      // let b = prompt("Enter second side of triangle");
+      // let c = prompt("Enter third side of triangle");
+
+      // a = parseFloat(a);
+      // b = parseFloat(b);
+      // c = parseFloat(c);
+
+      // if (isNaN(a) || isNaN(b) || isNaN(c) || a <= 0 || b <= 0 || c <= 0) {
+      //   document.getElementsByClassName("para")[0].innerHTML = "Please enter valid positive numbers.";
+      // } else {
+      //   let s = (a + b + c) / 2;
+      //   let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      //   document.getElementsByClassName("para")[0].innerHTML = `The area of the triangle is: ${area.toFixed(2)}`;
+      // }
+      // third question---------------------------------------------------------------------------------------------------------------
+      var a = parseInt(prompt("enter first value"));
+      var b = parseInt(prompt("enter second value"));
+      console.log(`the value of a is ${a} and value of b is ${b}`);
+      a=a+b;
+      b=a-b;
+      a=a-b;
+      console.log(` \n after swwaping the value of a and b is ${a},and ${b}`);
+    </script>
+  </body>
+</html>
