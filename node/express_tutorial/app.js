@@ -99,19 +99,36 @@
     
 // })
 // -----------------------------------for routes-------------------------------------------------
+// const express = require('express');
+// const app = express();
+
+// const homeRoutes = require('./routes/home');
+// const authRoutes = require('./routes/auth');
+
+// app.use(express.json()); // to parse JSON body
+
+// // Mount routers
+// app.use('/', homeRoutes);        // for / and /about
+// app.use('/auth', authRoutes);    // for /auth/login and /auth/register
+
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on `);
+// });
+// ---------------------------------------------------------------post done
 const express = require('express');
 const app = express();
 
-const homeRoutes = require('./routes/home');
-const authRoutes = require('./routes/auth');
+// Middleware to parse JSON body
+app.use(express.json());
 
-app.use(express.json()); // to parse JSON body
+// Simple POST route
+app.post('/', (req, res) => {
+  console.log(req.body);  // Logs whatever you send
+  res.send('Data received successfully!');
+});
 
-// Mount routers
-app.use('/', homeRoutes);        // for / and /about
-app.use('/auth', authRoutes);    // for /auth/login and /auth/register
-
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on `);
+// Start server
+app.listen(3000, () => {
+  console.log('Server running on http://localhost:3000');
 });
