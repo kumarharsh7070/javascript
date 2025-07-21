@@ -127,6 +127,7 @@ app.post('/', (req, res) => {
   console.log(req.body);  // Logs whatever you send
   res.send('Data received successfully!');
 });
+// ----------------------------------------------------
 
 // Start server
 app.listen(3000, () => {
